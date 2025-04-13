@@ -1,0 +1,117 @@
+@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+
+/* variables */
+:root {
+    /* Colors */
+    --slate-300: hsl(212, 45%, 89%);
+    --slate-500: hsl(216, 15%, 48%);
+    --slate-900: hsl(218, 44%, 22%);
+    /* Spacing */
+    --spacing-200: 16px;
+    --spacing-300: 24px;
+    --spacing-500: 40px;
+    /* Text preset 1  - heading */
+    --font-heading-size: 22px;
+    --font-heading-weight: 700;
+    --font-heading-line-height: 1.2;
+    --font-heading-letter-spacing: 0px;
+    /* Text preset 2 - body  */
+    --font-body-size: 15px;
+    --font-body-weight: 400;
+    --font-body-line-height: 1.4;
+    --font-body-letter-spacing: 0.2px;
+    /* border radius var */
+    --border-radius-lg: 20px;
+    --border-radius-md: 10px;
+    /* box shadow */
+    --box-shadow: 0 25px 25px rgba(0, 0, 0, 0.05);
+}
+
+/* css reset */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* Accessibility */
+.sr-only {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border-width: 0;
+}
+
+body {
+    font-family: 'Outfit', sans-serif;
+}
+
+main {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: var(--spacing-300);
+    background-color: var(--slate-300);
+}
+
+
+/* Typings classes */
+.heading-lg {
+    font-size: var(--font-heading-size);
+    font-weight: var(--font-heading-weight);
+    line-height: var(--font-heading-line-height);
+    letter-spacing: var(--font-heading-letter-spacing);
+}
+
+.body-md {
+    font-size: var(--font-body-size);
+    font-weight: var(--font-body-weight);
+    line-height: var(--font-body-line-height);
+    letter-spacing: var(--font-body-letter-spacing);
+}
+
+/* Component */
+
+.qr-component {
+    border-radius: var(--border-radius-lg);
+    box-shadow: var(--box-shadow);
+    background: white;
+    max-width: 320px;
+    text-align: center;
+    padding: var(--spacing-200);
+}
+
+.qr-component img {
+    display: block;
+    aspect-ratio: 1/1;
+    border-radius: var(--border-radius-md);
+    width: 288px;
+    -o-object-fit: cover;
+    object-fit: cover;
+}
+
+.qr-component figcaption {
+    display: flex;
+    flex-direction: column;
+    padding-block: var(--spacing-300);
+    padding-inline: var(--spacing-200);
+    gap: var(--spacing-200);
+}
+
+.qr-component figcaption h2 {
+    color: var(--slate-900);
+}
+
+.qr-component figcaption p {
+    color: var(--slate-500);
+}
+
+.attribution {
+    display: none;
+}
